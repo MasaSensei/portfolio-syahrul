@@ -1,0 +1,6 @@
+.bg-cover {
+  background-image: url("../../../assets/images/Black and White Modern Minimalist Creative Portfolio Website Design Prototype.png");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}

@@ -1,0 +1,26 @@
+/* ProjectSlider.css */
+
+/* Container untuk kartu-kartu slide */
+.slider-container {
+  display: flex;
+  width: 200%; /* Menggandakan lebar untuk dua kartu yang sejajar */
+  transition: transform 0.3s ease; /* Animasi transisi */
+}
+
+/* Kartu Slide */
+.slider-card {
+  flex: 1;
+  max-width: 45%; /* Lebar maksimum kartu */
+  transition: transform 0.3s ease; /* Animasi transisi */
+  margin-right: 10px; /* Jarak antara dua kartu */
+}
+
+/* Geser kartu ke kiri */
+.slide-left .slider-container {
+  transform: translateX(-50%);
+}
+
+/* Geser kartu ke kanan */
+.slide-right .slider-container {
+  transform: translateX(0%);
+}
