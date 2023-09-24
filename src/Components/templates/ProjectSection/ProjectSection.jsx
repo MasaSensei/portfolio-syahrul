@@ -7,19 +7,19 @@ const ProjectSection = () => {
   // Daftar slide Anda
   const slides = [
     {
-      url: "src/assets/images/A1286.jpg",
+      url: "./src/assets/images/A1286.jpg",
       title: "A1286",
       description:
         "This unit is quite problematic because it is weak in the GPU and VGA departments.",
     },
     {
-      url: "src/assets/images/A1389.jpg",
+      url: "./src/assets/images/A1389.jpg",
       title: "A1389",
       description:
         "The same unit as A1278, A1466 does not have special damage specifications.",
     },
     {
-      url: "src/assets/images/A1708.jpg",
+      url: "./src/assets/images/A1708.jpg",
       title: "A1708",
       description:
         "Flexgate or easily broken flexible LCD. This happens on some macbook units.",
