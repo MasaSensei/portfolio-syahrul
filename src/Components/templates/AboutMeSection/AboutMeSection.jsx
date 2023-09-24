@@ -36,7 +36,7 @@ const AboutMeSection = () => {
             </div>
             <div className="flex-1 lg:order-2">
               <img
-                src="/assets/images/about_me.png"
+                src="/assets/images/about_me.jpeg"
                 alt=""
                 className="w-full h-full rounded-lg"
               />
