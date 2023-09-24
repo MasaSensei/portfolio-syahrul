@@ -4,7 +4,10 @@ import Atoms from "../../atoms";
 
 const AboutMeSection = () => {
   return (
-    <section className="w-full max-h-screen h-screen bg-slate-900 flex items-center justify-center">
+    <section
+      className="w-full max-h-screen h-screen bg-slate-900 flex items-center justify-center"
+      id="about_me"
+    >
       <div className="container mx-auto text-center px-auto">
         <div className="mx-auto px-5">
           <div className="flex lg:flex-row flex-col items-center gap-5">
@@ -23,14 +26,17 @@ const AboutMeSection = () => {
                 </p>
               </div>
               <div className="flex flex-row gap-5 items-center justify-center">
-                <Atoms.Button link="/contact" className="bg-red-900">
+                <Atoms.Button
+                  link="mailto:syahrulkhanmubarok280903@gmail.com"
+                  className="bg-red-900"
+                >
                   Contact Me
                 </Atoms.Button>
               </div>
             </div>
             <div className="flex-1 lg:order-2">
               <img
-                src="https://i0.wp.com/kreativv.com/wp-content/uploads/2020/04/Sasuke-01.png?fit=800%2C500&ssl=1"
+                src="src/assets/images/about_me.jpeg"
                 alt=""
                 className="w-full h-full rounded-lg"
               />

@@ -1,9 +1,44 @@
 import { useState, useEffect } from "react";
+import Atoms from "../../atoms";
+import { Link, useLocation } from "react-router-dom";
 
-const Navbar = () => {
+const Navbar = (props) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSticky, setIsSticky] = useState(false);
   const [isIdle, setIsIdle] = useState(false);
+
+  // daftar Menu
+  const menuItems =
+    location.pathname === "/project"
+      ? [
+          {
+            label: "Home",
+            link: "/",
+            current: true,
+          },
+        ]
+      : [
+          {
+            label: "Home",
+            link: "#home",
+            current: true,
+          },
+          {
+            label: "About Me",
+            link: "#about_me",
+            current: false,
+          },
+          {
+            label: "Project",
+            link: "#project",
+            current: false,
+          },
+          {
+            label: "Contact",
+            link: "#contact",
+            current: false,
+          },
+        ];
 
   let idleTimer; // Timer to track user inactivity
   let stickyTimer; // Timer to make navbar sticky for 3 seconds
@@ -64,16 +99,12 @@ const Navbar = () => {
       } bg-transparent border-gray-200 w-full py-5 z-50 transition-all duration-500`}
     >
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-        <a href="https://flowbite.com/" class="flex items-center">
-          <img
-            src="https://flowbite.com/docs/images/logo.svg"
-            class="h-8 mr-3"
-            alt="Flowbite Logo"
-          />
+        <Link to="/" class="flex items-center">
+          <img src="src/assets/images/logo_2.png" alt="logo" />
           <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-            Flowbite
+            Syahrul Mubarak
           </span>
-        </a>
+        </Link>
         <button
           data-collapse-toggle="navbar-default"
           type="button"
@@ -105,49 +136,7 @@ const Navbar = () => {
           } w-full md:block md:w-auto`}
           id="navbar-default"
         >
-          <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-transparent dark:border-gray-700 md:opacity-50 backdrop-filter backdrop-blur-md">
-            <li>
-              <a
-                href="#"
-                class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500"
-                aria-current="page"
-              >
-                Home
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-              >
-                About
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-              >
-                Services
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-              >
-                Pricing
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark-text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-              >
-                Contact
-              </a>
-            </li>
-          </ul>
+          <Atoms.MenuList menuItems={menuItems} />
         </div>
       </div>
     </nav>

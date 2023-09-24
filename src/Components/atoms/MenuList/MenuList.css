@@ -1,0 +1,9 @@
+/* CSS */
+.menu-item {
+  color: #333; /* Warna default */
+  transition: color 0.3s ease; /* Efek transisi perubahan warna */
+}
+
+.menu-item.active {
+  color: blue; /* Warna saat aktif */
+}

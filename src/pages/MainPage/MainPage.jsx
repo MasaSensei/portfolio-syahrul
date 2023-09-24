@@ -4,13 +4,13 @@ import Templates from "../../Components/templates";
 
 const MainPage = () => {
   return (
-    <div className="w-full">
+    <main className="w-full">
       <Organism.Navbar />
       <Templates.HeroSection />
       <Templates.AboutMeSection />
       <Templates.ProjectSection />
       <Templates.ContactSection />
-    </div>
+    </main>
   );
 };
 

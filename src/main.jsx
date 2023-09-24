@@ -3,12 +3,16 @@ import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "./App.jsx";
 import "./index.css";
-import MainPage from "./pages/MainPage/MainPage.jsx";
+import Pages from "./pages/index.js";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <MainPage />,
+    element: <Pages.MainPage />,
+  },
+  {
+    path: "/project",
+    element: <Pages.ProjectPage />,
   },
 ]);
 
