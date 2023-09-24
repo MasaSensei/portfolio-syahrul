@@ -100,7 +100,7 @@ const Navbar = (props) => {
     >
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <Link to="/" class="flex items-center">
-          <img src="src/assets/images/logo_2.png" alt="logo" />
+          <img src="/assets/images/logo_2.png" alt="logo" />
           <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
             Syahrul Mubarak
           </span>

@@ -13,7 +13,7 @@ const ProjectPage = () => {
       title: "A1466",
       description: `For this series. The previous MacBook Air series, this unit was quite stubborn
       because specific problems rarely occur`,
-      image: "./src/assets/images/A1466.jpg",
+      image: "/assets/images/A1466.jpg",
       alt: "A1466",
     },
     {
@@ -25,20 +25,20 @@ const ProjectPage = () => {
       title: "A1278",
       description: `Just like the A1466 unit, this unit is quite stubborn. However, that doesn't mean it can't be damaged.
       It can be damaged from no charging to total death.`,
-      image: "./src/assets/images/A1278.jpg",
+      image: "/assets/images/A1278.jpg",
       alt: "A1278",
     },
     {
       title: "A1286",
       description: `This unit is quite problematic because it is weak in the GPU and VGA departments.`,
-      image: "./src/assets/images/A1286.jpg",
+      image: "/assets/images/A1286.jpg",
       alt: "A1286",
     },
     {
       title: "A1502",
       description: `The MacBook units that I have experienced are quite unique because they are just different years of release
       in several components and their data. VGA.`,
-      image: "./src/assets/images/A1502.jpg",
+      image: "/assets/images/A1502.jpg",
       alt: "A1502",
     },
   ];
